@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Suzana</title>
+
+    <style>
+
+        body{
+            background-color: purple ;
+        }
+        .painel{
+            margin:auto;           
+            background-color: white;            
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #sim{
+
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -70px;
+        }
+        #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+
+        }
+        .container{
+            text-align: center; 
+            
+        }
+
+        div#img{
+            display: block;
+            margin: 0 auto; 
+
+        }
+
+             
+    </style>
+</head>
+<body>
+        
+    <div class="painel">
+        <h1>vamos sair?</h1>
+        <a href="https://www.youtube.com/watch?v=GrK34MHSVoQ"><button id="sim"> Sim! </button></a>
+        <button onmouseover="fuja()"id="nao"> Não! </button>
+        <div><img src="fodase.jpg" style= "position: auto" width="160" height="125"></div>
+        
+
+    </div>
+    
+    <script>
+         
+        function fuja() {
+        let btn = document.getElementById('nao');
+        let newX = Math.random() * (window.innerWidth - btn.offsetWidth);
+        let newY = Math.random() * (window.innerHeight - btn.offsetHeight);
+        btn.style.position = 'absolute';
+        btn.style.left = newX + 'px';
+        btn.style.top = newY + 'px';
+            
+         }
+
+    </script>
+</body>
+</html>
